@@ -10,3 +10,5 @@ CODE_COVERAGE=code-coverage
 
 run: ## Start application
 	$(GOCMD) run ./cmd -b 0.0.0.0
+swag: ## Generate swagger2 docs
+	swag init -g handlers/facts.go  -o ./cmd/api/docs
